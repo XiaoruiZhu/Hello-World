@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIStackView *testLabel;
+
 @end
 
 @implementation ViewController
@@ -22,6 +24,9 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)testButtonTapped:(id)sender {
+    self.testLabel.tag = @"It worked!";
 }
 
 @end
